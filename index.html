@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Java</title>
+</head>
+<body class="bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">ARTIFICIAL NEURAL NETWORK HOPFIELD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    <div class="container mt-5">
+        <div class="row">
+            
+            <div class="col-md-5">
+                <button class="btn btn-success  mb-2 btn-block" id="startTraining">TRAIN NOW</button>
+                <div id="alert"></div>
+                <div class="card mb-4">
+                    
+                    <h3 class="text-center pt-1">Insert your input</h3>
+                    <div class="card-body bg-secondary">
+                <div class="row">
+               
+                            <div class="col">
+                                <input type="number" max="1" min="-1" value="0" class="form-control" id="item1" required>
+                            </div>
+                            <div class="col">
+                                <input type="number" max="1" min="-1" value="0" class="form-control" id="item2" required>
+                            </div>
+                            <div class="col">
+                                <input type="number" max="1" min="-1" value="0" class="form-control" id="item3" required>
+                            </div>
+                            <div class="col">
+                                <input type="number" max="1" min="-1" value="0" class="form-control" id="item4" required>
+                            </div>
+                        </div>
+                        <button disabled class="btn btn-warning mt-3 btn-block" id="Begin">BEGIN</button>
+                </div>
+            </div>
+            <h4 class="text-white mt-2">Training patterns:</h4>
+            <ul class="text-white">
+                <li><p>Pattern 1: X1 = [1,1,1,-1]</p> </li>
+                <li><p>Patern 2: X2 = [-1,-1,-1,1]</p></li>
+            </ul>
+            
+            
+            <div id="Weights" class="text-white mt-2">
+                
+            </div>
+            </div>
+            <div class="col-md-7">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Iteration</th>
+                        <th>Input pattern</th>
+                        <th>ANN Result</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody" class="text-white">
+                    </tbody>
+                  </table>       
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/RNA-Hopfield.js"></script>
+</body>
+</html>
